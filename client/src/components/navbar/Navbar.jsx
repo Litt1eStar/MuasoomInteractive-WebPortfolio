@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   return <>
-    <nav className={styles.navbar}>
+    <section className={styles.navbar}>
         <div className={styles.navbar_left}>
             <a className={styles.navbar_name}>Muasoom</a>
         </div>
@@ -15,7 +15,7 @@ const Navbar = () => {
               <AiOutlineMenu size={25}/>
             </a>
         </div>
-    </nav>
+    </section>
     {/* <div className={styles.navbar_bottom}></div> */}
   </>
 };

@@ -1,7 +1,25 @@
 *{
-  background-color: #0A0A0B;
   color: #fff;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+html, body{
+  background-color: black;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+span, p, button{
+  color: black;
+}
+
+button{
+  padding: 0rem;
+  border: none;
 }
