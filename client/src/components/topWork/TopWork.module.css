@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    height: 180rem;
+    height: 200rem;
     background-color: red;
     outline: 2px solid red;
     display: flex;
@@ -12,7 +12,7 @@
 
 .item{
     width: 90vw;
-    height: 40%;
+    height: 60%;
     background-color: white;
 }
 
@@ -33,11 +33,12 @@
 @media screen and (max-width: 600px){
     .container{
         padding-top: 3rem;
-        height: 70rem;
+        height: 50rem;
+        gap: 2rem;
     }
     .item{
-        width: 80vw;
-        height: 40%;
+        width: 90vw;
+        height: 30%;
     }
 
     .lastItem{
