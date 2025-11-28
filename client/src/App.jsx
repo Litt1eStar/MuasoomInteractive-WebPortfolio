@@ -4,6 +4,7 @@ import TopWork from "./components/topWork/TopWork"
 import OurServices from "./components/ourServices/OurServices"
 import WhatHaveWeDone from "./components/whatHaveWeDone/WhatHaveWeDone"
 import AboutUs from "./components/aboutUs/AboutUs"
+import TeamMember from "./components/teamMembers/TeamMember"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <OurServices />
       <WhatHaveWeDone />
       <AboutUs />
+      <TeamMember />
     </>
   )
 }
