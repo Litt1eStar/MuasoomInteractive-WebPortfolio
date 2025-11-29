@@ -1,0 +1,54 @@
+.container{
+    width: 80%;
+    height: 35rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    gap: 8rem;
+    margin-bottom: 10rem;
+}   
+
+.title, .contactUsBtn{
+    color: black;
+    font-size: 5rem;
+}
+
+.contactUsBtn{
+    text-align: center;
+    padding: 2rem 0;
+    width: 60%;
+    height: 30%;
+    color: white;
+    font-weight: 900;
+    background: #ababab;
+    background: linear-gradient(90deg,rgba(171, 171, 171, 1) 0%, rgba(77, 77, 77, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    border-radius: 5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        height: 30rem;
+        width: 90%;
+        gap: 4rem
+    }
+    .title, .contactUsBtn{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        margin-top: 3rem;
+        height: 20rem;
+        width: 90%;
+        gap: 4rem;
+        border-radius: 3rem;
+    }
+    .title, .contactUsBtn{
+        font-size: 2rem;
+    }
+}
