@@ -1,0 +1,36 @@
+.container{
+    height: 50rem;
+    background-color: rgb(136, 127, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    margin-bottom: 10rem;
+}
+
+.title{
+    height: 10%;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.reviewContainer{
+    height: 90%;
+    background-color: blue;
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        height: 50rem;
+        padding: 1rem;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        height: 30rem;
+    }
+}

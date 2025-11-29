@@ -1,0 +1,13 @@
+.checkboxItem{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkboxTitle{
+    margin-left: 1rem;
+    color: white;
+    font-size: 2.5rem;
+}

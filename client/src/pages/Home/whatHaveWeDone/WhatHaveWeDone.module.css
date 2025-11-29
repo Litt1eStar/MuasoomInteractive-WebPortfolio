@@ -1,0 +1,59 @@
+.container{
+    height: 90rem;
+    background-color: rgb(136, 127, 255);
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 5rem;
+    gap: 3rem;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.title{
+    font-size: 8rem
+}
+
+.seeAllBtn{
+    font-size: 3rem;
+}
+
+.workContainer{
+    width: 100%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        height: 60rem;
+        padding-top: 3rem;
+    }
+
+    .title{
+        font-size: 3.5rem;
+    }
+
+    .seeAllBtn{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        height: 40rem;
+        padding-top: 2rem
+    }
+    .title{
+        font-size: 2rem;
+    }
+
+    .seeAllBtn{
+        font-size: 1rem;
+    }
+}
