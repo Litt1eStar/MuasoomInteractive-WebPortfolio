@@ -65,12 +65,12 @@
     }    
 
     .title{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     
     .leftContainer{
         padding-top: 1rem;
-        padding-left: 1rem;
+        padding-left: 0rem;
     }
 
     .learnMoreBtn{
