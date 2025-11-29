@@ -5,11 +5,11 @@ const Navbar = () => {
   return <>
     <section className={styles.navbar}>
         <div className={styles.navbar_left}>
-            <a className={styles.navbar_name}>Muasoom</a>
+            <a className={styles.navbar_name} href='/'>Muasoom</a>
         </div>
         <div className={styles.navbar_right}>
-            <a className={styles.navbar_icon}>Home</a>
-            <a className={styles.navbar_icon}>Work</a>
+            <a className={styles.navbar_icon} href='/'>Home</a>
+            <a className={styles.navbar_icon} href='/works'>Work</a>
             <a className={styles.navbar_icon}>About</a>
             <a className={styles.navbar_hamburger}>
               <AiOutlineMenu size={25}/>
