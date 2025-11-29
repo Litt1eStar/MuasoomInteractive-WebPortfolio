@@ -1,0 +1,102 @@
+.container{
+    height: 70rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+}
+
+.leftContainer{
+    width: 50%;
+    height: inherit;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    padding-left: 4rem;
+}
+
+.title{
+    font-size: 7rem;
+}
+
+.rightContainer{
+    width: 50%;
+    height: inherit;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 8rem;
+}
+
+.description{
+    font-size: 2.5rem;
+    color: black;
+}
+
+.experienceIcon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.icon{
+    width: 20rem;
+    height: 10rem;
+    background-color: white;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        height: 50rem;
+    }
+    .title{
+        font-size: 4rem;
+    }
+    .description{
+        font-size: 1.5rem;
+    }
+    .icon{
+        width: 10rem;
+        height: 8rem;
+    }
+
+    .leftContainer{
+        padding-top: 6rem;
+        padding-left: 2rem;
+    }
+
+    .rightContainer{
+        padding-top: 6rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        height: 35rem;
+    }
+    .title{
+        font-size: 2.5rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    .icon{
+        width: 6rem;
+        height: 4rem;
+    }
+
+    .leftContainer{
+        padding-top: 4rem;
+        padding-left: 0.5rem;
+    }
+
+    .rightContainer{
+        padding-top: 4rem;
+    }
+}

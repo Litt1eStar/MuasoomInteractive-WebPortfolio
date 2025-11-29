@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className={styles.navbar_right}>
             <a className={styles.navbar_icon} href='/'>Home</a>
             <a className={styles.navbar_icon} href='/works'>Work</a>
-            <a className={styles.navbar_icon}>About</a>
+            <a className={styles.navbar_icon} href='/aboutus'>About</a>
             <a className={styles.navbar_hamburger}>
               <AiOutlineMenu size={25}/>
             </a>
