@@ -3,7 +3,8 @@
     height: 70rem;
     outline: 3px solid red;
     display: flex;
-    justify-self: center
+    justify-self: center;
+    margin-bottom: 10rem;
 }
 
 .topContainer{
@@ -91,6 +92,7 @@
     .container{
         height: 60rem;
         flex-direction: column;
+        margin-bottom: 5rem;
     }
 
     .topContainer{
@@ -122,6 +124,7 @@
     .container{
         height: 40rem;
         flex-direction: column;
+        margin-bottom: 3rem;
     }
 
     .leftContainer{
