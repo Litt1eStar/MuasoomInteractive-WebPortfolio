@@ -6,7 +6,6 @@ import WhatHaveWeDone from "./whatHaveWeDone/WhatHaveWeDone";
 import AboutUs from "./aboutUs/AboutUs";
 import TeamMember from "./teamMembers/TeamMember";
 import CustomerReviews from "./customerReviews/CustomerReviews";
-import GetInTouch from "./getInTouch/GetInTouch";
 import CTA from "../../components/CTA/CTA";
 
 const Home = () => {

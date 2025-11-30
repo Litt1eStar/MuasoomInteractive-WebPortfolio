@@ -57,3 +57,10 @@
         font-size: 1rem;
     }
 }
+
+
+@media screen and (max-width: 430px){
+    .title{
+        font-size: 1.7rem;
+    }
+}

@@ -18,13 +18,14 @@
 
 .navbar_left{
     font-size: 3rem;
-    padding-left: 3rem;
+    padding-left: 5rem;
 }
 
 .navbar_right{    
     font-size: 2rem;
     justify-content: center;
     gap: 6rem;
+    padding-left: 20rem;
 }
 
 .navbar_hamburger{
@@ -42,6 +43,7 @@
     .navbar_right{
         font-size: 1.5rem;
         gap: 3.5rem;
+        padding-left: 5rem;
     }
 }
 
@@ -54,14 +56,88 @@
     }
 
     .navbar_left{
-        padding-left: 1rem;
+        padding-left: 3rem;
         font-size: 2rem;
     }
 
     .navbar_right{
         justify-content: flex-end;
-        padding-right: 1rem;
+        padding-right: 3rem;
     }
+    
+    .navbar_hamburger{
+        display: block;
+    }
+
+    .navbar_icon{
+        display: none;
+    }
+}
+
+
+/* --- Mobile Menu Overlay Styles --- */
+.mobile_menu_overlay {
+    /* Covers the entire viewport */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Choose your background color */
+    background-color: #000000d5; 
+    color: rgb(0, 0, 0);
+    
+    /* Ensure it is above all other page content */
+    z-index: 999; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile_menu_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem; /* Match your mobile padding */
+    height: 60px; /* Match mobile navbar height */
+}
+
+.close_btn {
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+}
+
+.mobile_nav_links {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    align-items: center;
+}
+
+.menu_item {
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* <-- Explicitly set link color to black */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.359);
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+
+/* --- Responsive Hide/Show --- */
+
+/* The overlay should ONLY be visible on small screens */
+/* Since you are showing the hamburger at 600px, let's hide the menu by default and
+   only rely on the React conditional rendering */
+
+/* Ensure the full-sized menu items are hidden when the hamburger shows (600px) */
+@media screen and (max-width: 600px){
+    /* ... (rest of your 600px styles) ... */
     
     .navbar_hamburger{
         display: block;

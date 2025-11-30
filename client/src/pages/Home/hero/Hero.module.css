@@ -1,30 +1,47 @@
 .container{
-    background-color: #fff;
     width: 100%;
     height: 60rem;
-    outline: 2px solid springgreen;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-image: url("../../../img/Backgrounds/Home-Banner.png");
+    background-size: cover;
+    background-position: center;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 .name{
+    letter-spacing: 0.4rem;
     font-size: 5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
-    color: black;
+    color: rgb(255, 255, 255);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+
+
 }
 
 .description{
     font-size: 2rem;
+    letter-spacing: 0.2rem;
     margin-bottom: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 
 .btn_container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    /* gap: 1rem; */
 }
 
 .btn{
@@ -54,17 +71,34 @@
 @media screen and (max-width: 600px){
     .container{
         padding-bottom: 6rem;
+        height: 50rem;
+        background-image: none;
+        background: #000000;
+        background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgb(24, 24, 24) 50%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 1) 100%);
     }
     .name{
         font-size: 3rem;
+        -webkit-animation: none;
+        -moz-animation: none;
+        animation: none;
     }   
 
     .description{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .btn_container{
         flex-direction: column;
         gap: 1rem;
+        align-items: center;
     }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ff11, 0 0 40px #09ff11, 0 0 50px #09ff11, 0 0 60px #09ff11, 0 0 70px #09ff11;
+  }
+  to {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #09490b, 0 0 30px #09490b, 0 0 40px #09490b, 0 0 50px #09490b, 0 0 60px #09490b, 0 0 70px #09490b;
+  }
 }
