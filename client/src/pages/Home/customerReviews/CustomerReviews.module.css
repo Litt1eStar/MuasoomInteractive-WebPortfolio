@@ -9,8 +9,9 @@
 
 .title{
     height: 10%;
-    font-size: 5rem;
-    margin-bottom: 1rem;
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
 }
 
 .reviewContainer{
@@ -26,11 +27,19 @@
 
     .title{
         font-size: 3rem;
+        margin-bottom: 0rem;
     }
 }
 
 @media screen and (max-width: 600px) {
     .container{
         height: 30rem;
+        margin-bottom: 5rem;
+    }
+
+    .title{
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
     }
 }

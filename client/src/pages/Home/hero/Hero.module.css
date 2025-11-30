@@ -54,6 +54,7 @@
 @media screen and (max-width: 600px){
     .container{
         padding-bottom: 6rem;
+        height: 50rem;
     }
     .name{
         font-size: 3rem;
