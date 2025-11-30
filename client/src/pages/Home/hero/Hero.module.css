@@ -47,10 +47,25 @@
 .btn{
     width: 12rem;
     height: 4rem;
-    font-size: 2rem;
-    border: 1px solid black;
-    border-radius: 1rem;
-    background-color: white;
+    font-size: 1.5rem;
+    border: 3px solid rgba(161, 161, 161, 0.208);
+    color: rgb(0, 0, 0);
+    border-radius: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    -webkit-box-shadow:0px 0px 10px 2px rgba(255,255,255,0.99);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(255,255,255,0.99);
+    box-shadow: 0px 0px 10px 2px rgba(255,255,255,0.99);
+
+    transition: transform 0.1s ease-out;
+    transition: color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.btn:hover{
+    transform: scale(1.2);
+    background-color: rgba(176, 176, 176, 0.404);
+    color: white;
 }
 
 
@@ -70,8 +85,7 @@
 
 @media screen and (max-width: 600px){
     .container{
-        padding-bottom: 6rem;
-        height: 50rem;
+        height: 40rem;
         background-image: none;
         background: #000000;
         background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgb(24, 24, 24) 50%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 1) 100%);
@@ -91,6 +105,10 @@
         flex-direction: column;
         gap: 1rem;
         align-items: center;
+    }
+
+    .btn{
+        font-size: 1.2rem;
     }
 }
 
