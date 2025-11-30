@@ -1,20 +1,113 @@
 .container{
     height: 70rem;
-    background-color: aquamarine;
     display: flex;
     flex-direction: column;
     padding: 5rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box{
+    height: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftBox{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rightBox{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewImage{
+    width: 100%;
+    height: 70%;
+    
+    object-fit: cover;
+    object-position: left;
+    margin-bottom: 5rem;
+
+    -webkit-box-shadow:0px 0px 31px 2px rgba(255,255,255,0.99);
+    -moz-box-shadow: 0px 0px 31px 2px rgba(255,255,255,0.99);
+    box-shadow: 0px 0px 31px 2px rgba(255,255,255,0.99);
+
+    transition: transform 0.3s ease-out;
+}
+
+.previewImage:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+
+    box-shadow: 0px 0px 30px 2px rgba(55,189,6,0.99);
+}
+.arrow {
+    font-size: 3rem; /* responsive */
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+}
+
+.listWrapper {
+    height: 60%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    scroll-snap-type: y mandatory;
+}
+
+.serviceItem {
+    padding: 10px 0;
+    font-size: 2rem; /* responsive */
+    font-weight: normal;
+    color: #ffffff;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+}
+
+.serviceItem.active {
+    font-size: 4rem; /* responsive */
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .title{
     font-size: 7rem;
     margin-bottom: 3rem;
+    font-weight: bold;
 }
 
 .wordCloud{
     width: 100%;
     height: 80%;
-    background-color: white;
 }
 
 @media screen and (max-width: 1024px) {
@@ -26,6 +119,18 @@
     .title{
         font-size: 5rem;
     }
+
+    .rightBox{
+        display: none;
+    }
+
+    .leftBox{
+        width: 100%;
+    }
+
+    .listWrapper{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -35,6 +140,15 @@
     }
     .title{
         margin-bottom: 1rem;
-        font-size: 2.3rem;
+        font-size: 0rem;
+    }
+
+    .serviceItem{
+        font-size: 1rem;
+    }
+
+    
+    .serviceItem.active{
+        font-size: 2rem;
     }
 }
