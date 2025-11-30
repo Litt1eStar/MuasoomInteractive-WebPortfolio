@@ -4,6 +4,10 @@
   margin: 0;
   box-sizing: border-box;
   /* outline: 1px solid red; */
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 html, body{
