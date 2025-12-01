@@ -17,10 +17,6 @@ const Hero = () => {
                 <div className={styles.description}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non facilisis quam, sit amet viverra elit. Pellentesque sed tempus turpis. Cras a ex sit amet odio sagittis sollicitudin. Sed non semper nunc, eu viverra massa. Donec ut interdum mi, id finibus massa. Maecenas vel metus sapien.
                 </div>
-                <div className={styles.experienceIcon}>
-                    <div className={styles.icon} />
-                    <div className={styles.icon} />
-                </div>
             </div>
         </div>
     </>

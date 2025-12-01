@@ -1,25 +1,69 @@
+:root {
+    --monster-green: #4ED300; 
+}
+
 .container{
     width: 100%;
     height: 80rem;
-    background-color: rgb(67, 67, 67);
     display: flex;
     flex-direction: column;
     gap: 7rem;
 }
 
-.title{
-    font-size: 8rem;
-    padding-left: 20%;
-    margin-top: 5rem
+.title {
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 900;
+    
+    color: transparent; 
+    
+    background: linear-gradient(
+        90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        #FFFFFF 50%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    
+    background-size: 200% auto; 
+    background-position: 0 0;
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    animation: lightWipe 4s infinite linear; 
+}
+
+@keyframes lightWipe {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .content_header{
     font-size: 4rem;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 0.5rem; 
+    
+    text-shadow: 0 0 5px var(--monster-green); 
+    
+    transition: transform 0.3s ease-out;
+}
+
+.content_header:hover {
+    transform: translateY(-2px) scale(1.02);
+    color: var(--monster-green);
+    cursor: default;
 }
 
 .content_desc{
     width: 60%;
     font-size: 2rem;
+    color: #C0C0C0; 
+    line-height: 1.5; 
 }
 
 .firstContent, .thirdContent{
@@ -34,32 +78,58 @@
     width: 90%;
 }
 
+.firstContent, .thirdContent, .secondContent{
+    transition: all 2s ease-out;
+}
+
+.firstContent:hover, .thirdContent:hover{
+    transform: scale(1.05) rotate(2deg);
+    /* box-shadow: 0 10px 20px rgba(78, 211, 0, 0.3); */
+    cursor: pointer;
+}
+
+.secondContent:hover{
+    transform: scale(1.05) rotate(-1deg);
+    /* box-shadow: 0 10px 20px rgba(78, 211, 0, 0.3); */
+    cursor: pointer;
+}
+
+
+
+
 @media screen and (max-width: 1024px) {
     .container{
+        height: 65rem;
         gap: 5rem;
     }
     .title{
-        font-size: 5rem;
-        padding-left: 15%;
+        font-size: 4rem;
     }
+
+    .content_header{
+        font-size: 2.5rem;
+    }
+
+    .content_desc{
+        font-size: 1.5rem;
+    }    
 }
 
 
 @media screen and (max-width: 600px) {
     .container{
-        height: 50rem;
+        height: 45rem;
     }
 
     .title{
-        font-size: 3rem;
-        padding-left: 10%;
-    }
-
-    .content_header{
         font-size: 2rem;
     }
 
+    .content_header{
+        font-size: 1.4rem;
+    }
+
     .content_desc{
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }
