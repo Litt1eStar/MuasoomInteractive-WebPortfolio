@@ -1,18 +1,21 @@
 import React, {useState, useRef, useEffect} from "react";
 import styles from "./OurServices.module.css"
 
-import previewImage from '../../../img/Project/Dolorem.jpg'
-import { TbHandClick } from "react-icons/tb";
+import DoloremImage from '../../../img/Project/Dolorem.jpg'
+import PhotoImage from '../../../img/Project/FinalPhotography.jpg'
+import GameDevImage from '../../../img/Project/NumberCaster.png'
+import AnimationImage from '../../../img/Project/PDPA.png'
+import AlphaImage from '../../../img/Project/AlphaLumaMatte.png'
+import Editing from '../../../img/Project/Workshop2.png'
 
 const services = [
-  { id: 1, text: 'Videography', image: previewImage},
-  { id: 2, text: 'Photography', image: ""},
-  { id: 3, text: 'Colour Grading', image: ""}, 
-  { id: 4, text: 'Website Development', image: ""},
-  { id: 5, text: 'Game Development', image: ""},
-  { id: 6, text: '2D Animation', image: ""},
-  { id: 7, text: '3D Animation', image: ""},
-  { id: 8, text: 'Editing', image: ""},
+  { id: 1, text: 'Videography', image: DoloremImage},
+  { id: 2, text: 'Photography', image: PhotoImage},
+  { id: 3, text: 'Colour Grading', image: DoloremImage}, 
+  { id: 4, text: 'Game Development', image: GameDevImage},
+  { id: 5, text: '2D Animation', image: AnimationImage},
+  { id: 6, text: '3D Animation', image: AlphaImage},
+  { id: 7, text: 'Editing', image: Editing},
 ];
 
 

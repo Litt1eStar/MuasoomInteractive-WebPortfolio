@@ -11,7 +11,7 @@ const CTA = () => {
             </div>
             <a 
               className={styles.contactUsBtn} 
-              href="/aboutus"
+              href="/contact"
               >
                 Contact Us
               </a>
