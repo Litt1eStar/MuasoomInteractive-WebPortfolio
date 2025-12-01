@@ -4,7 +4,7 @@ const Quotes = () => {
   return (
     <>
         <div className={styles.container}>
-            <div className={styles.title}>"ANOTHER QUOTE"</div>
+            <div className={styles.title}>"Where imagination gets its instruction manual"</div>
             <div className={`${styles.content} ${styles.firstContent}`}>
                 <div className={styles.content_header}>Creativity</div>
                 <div className={styles.content_desc}>We believe in pushing boundaries and delivering unique, impactful solutions through fresh ideas and innovative thinking.</div>
