@@ -1,38 +1,75 @@
 .container{
-    height: 70rem;
+    height: 50rem;
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: gray;
+    margin-bottom: 5rem;
 }
 
 .leftContainer{
     width: 50%;
     height: inherit;
-    background-color: blue;
     display: flex;
     flex-direction: column;
     padding-top: 8rem;
     padding-left: 4rem;
+    justify-content: center;
 }
 
 .title{
     font-size: 7rem;
+    color: white;
+    animation: pulseGlow 2.5s infinite alternate ease-in-out;
+}
+
+
+@keyframes pulseGlow {
+0% {
+        /* Tight glow: Strong white core, tight green aura */
+        text-shadow: 
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 20px #4ED300,
+            0 0 30px #4ED300;
+    }
+    50% {
+        /* Max spread: Wider green aura, higher energy */
+        text-shadow: 
+            0 0 8px #fff,
+            0 0 15px #fff,
+            0 0 40px #4ED300,
+            0 0 60px #4ED300,
+            0 0 80px rgba(78, 211, 0, 0.4); /* Extra wide, faint outer glow */
+    }
+    100% {
+        /* Return to tight glow */
+        text-shadow: 
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 20px #4ED300,
+            0 0 30px #4ED300;
+    }
 }
 
 .rightContainer{
     width: 50%;
     height: inherit;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding-top: 8rem;
+    justify-content: center
 }
 
 .description{
     font-size: 2.5rem;
-    color: black;
+    color: rgb(255, 255, 255);
+
+    transition: transform 1s ease-out;
+}
+
+.description:hover{
+    transform: scale(1.05);
 }
 
 .experienceIcon{
@@ -53,7 +90,7 @@
 
 @media screen and (max-width: 1024px) {
     .container{
-        height: 50rem;
+        height: 30rem;
     }
     .title{
         font-size: 4rem;
@@ -78,13 +115,14 @@
 
 @media screen and (max-width: 600px) {
     .container{
-        height: 35rem;
+        height: 25rem;
+        margin-bottom: 3rem;
     }
     .title{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .description{
-        font-size: 1rem;
+        font-size: .8rem;
     }
     .icon{
         width: 6rem;
@@ -93,7 +131,7 @@
 
     .leftContainer{
         padding-top: 4rem;
-        padding-left: 0.5rem;
+        padding-left: 1.3rem;
     }
 
     .rightContainer{
