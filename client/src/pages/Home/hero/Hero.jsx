@@ -1,6 +1,6 @@
-import React from "react";
 import styles from './Hero.module.css'
-import Button from '@mui/material/Button'
+import ButtonType01 from "../../../components/ButtonType01/ButtonType01";
+
 
 const Hero = () => {
   return (
@@ -10,10 +10,8 @@ const Hero = () => {
             <h1 className={styles.name}>Interactive</h1>
             <p className={styles.description}>Production House Based In Thailand</p>
             <div className={styles.btn_container}>
-                <Button sx={{color: "black", backgroundColor: "white", border: "3px solid white", borderRadius: "2rem", width: "12rem", height: "5rem", fontSize: "1.5rem"}} variant="outlined">Contact Us</Button>
-                <Button sx={{color: "black", backgroundColor: "white", border: "3px solid white", borderRadius: "2rem", width: "12rem", height: "5rem", fontSize: "1.5rem"}} variant="outlined">Projects</Button>
-                {/* <button className={`${styles.btn_contact} ${styles.btn}`}>Contact Us</button>
-                <button className={`${styles.btn_contact} ${styles.btn}`}>Services</button> */}
+              <ButtonType01 title={"Contact Us"} destination={"/aboutus"} />
+              <ButtonType01 title={"Projects"} destination={"/works"}/>
             </div>
         </div>
     </>
