@@ -1,3 +1,7 @@
+:root {
+    --monster-green: #4ED300; 
+}
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -5,7 +9,6 @@
     width: 100%;
     height: 100px;
     align-items: center;
-    border-bottom: 1px solid #fff;
 }
 
 .navbar_left, .navbar_right{
@@ -14,6 +17,18 @@
     display: flex;
     align-items: center;
     /* padding: 0 10rem; */;
+}
+
+.navbar_name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar_name:hover {
+    color: var(--monster-green); /* Green highlight on logo hover */
 }
 
 .navbar_left{
@@ -34,7 +49,30 @@
 
 .navbar_icon{
     display: block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
+
+.navbar_icon:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--monster-green);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar_icon:hover:after {
+    width: 100%;
+}
+
 @media screen and (max-width: 1024px){
     .navbar_left{
         font-size: 2.5rem;
@@ -77,30 +115,25 @@
 
 /* --- Mobile Menu Overlay Styles --- */
 .mobile_menu_overlay {
-    /* Covers the entire viewport */
-    position: fixed; 
+    position: fixed;    
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    
-    /* Choose your background color */
-    background-color: #000000d5; 
-    color: rgb(0, 0, 0);
-    
-    /* Ensure it is above all other page content */
-    z-index: 999; 
-    
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.98); 
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease-out; 
 }
 
 .mobile_menu_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem; /* Match your mobile padding */
-    height: 60px; /* Match mobile navbar height */
+    padding: 2rem 3rem; 
+    height: 60px;
 }
 
 .close_btn {
@@ -122,23 +155,16 @@
     font-size: 2.5rem;
     padding: 1.5rem 0;
     text-decoration: none;
-    color: rgb(255, 255, 255); /* <-- Explicitly set link color to black */
+    color: rgb(255, 255, 255); 
     border-bottom: 1px solid rgba(255, 255, 255, 0.359);
     width: 100%;
     text-align: center;
     letter-spacing: 0.5rem;
+    transition: color 0.3s ease-in-out;
 }
 
-/* --- Responsive Hide/Show --- */
 
-/* The overlay should ONLY be visible on small screens */
-/* Since you are showing the hamburger at 600px, let's hide the menu by default and
-   only rely on the React conditional rendering */
-
-/* Ensure the full-sized menu items are hidden when the hamburger shows (600px) */
-@media screen and (max-width: 600px){
-    /* ... (rest of your 600px styles) ... */
-    
+@media screen and (max-width: 600px){    
     .navbar_hamburger{
         display: block;
     }
