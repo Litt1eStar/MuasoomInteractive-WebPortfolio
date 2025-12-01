@@ -2,8 +2,6 @@ import { useState } from "react";
 import styles from "./CTA.module.css"
 
 const CTA = () => {
-  const [isButtonHovered, setIsButtonHovered] = useState(false)
-
   return (
     <>
         <div className={styles.container}>
@@ -11,11 +9,12 @@ const CTA = () => {
               <span>READY TO GET START</span>
               <span className={styles.confuse}>?</span>  
             </div>
-            <div 
+            <a 
               className={styles.contactUsBtn} 
+              href="/aboutus"
               >
                 Contact Us
-              </div>
+              </a>
         </div>
     </>
   )

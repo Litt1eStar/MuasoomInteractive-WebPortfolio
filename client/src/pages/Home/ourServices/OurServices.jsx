@@ -6,20 +6,21 @@ import { TbHandClick } from "react-icons/tb";
 
 const services = [
   { id: 1, text: 'Videography', image: previewImage},
-  { id: 2, text: 'Photography', url: ""},
-  { id: 3, text: 'Colour Grading', url: ""}, 
-  { id: 4, text: 'Website Development', url: ""},
-  { id: 5, text: 'Game Development', url: ""},
-  { id: 6, text: '2D Animation', url: ""},
-  { id: 7, text: '3D Animation', url: ""},
-  { id: 8, text: 'Editing', url: ""},
+  { id: 2, text: 'Photography', image: ""},
+  { id: 3, text: 'Colour Grading', image: ""}, 
+  { id: 4, text: 'Website Development', image: ""},
+  { id: 5, text: 'Game Development', image: ""},
+  { id: 6, text: '2D Animation', image: ""},
+  { id: 7, text: '3D Animation', image: ""},
+  { id: 8, text: 'Editing', image: ""},
 ];
 
 
 const OurServices = () => {
-  const [activeIndex, setActiveIndex] = useState(3);
+  const [isFirstTime, setIsFirstTime] = useState(true)
+  const [activeIndex, setActiveIndex] = useState(-1);
   const listRef = useRef(null)
-  const activeImage = services[activeIndex].image;
+  const activeImage = activeIndex !== -1 ? services[activeIndex].image : services[3].image;
 
   const scrollToActive = (index) => {
     if(listRef.current){
@@ -37,6 +38,13 @@ const OurServices = () => {
     scrollToActive(activeIndex);
   }, [activeIndex])
 
+  const handleMouseEnter = () => {
+    if(isFirstTime){
+      setActiveIndex(3)
+      setIsFirstTime(false)
+    }
+  }
+
   const handleItemClick = (index) => {
         setActiveIndex(index);
     };
@@ -51,7 +59,7 @@ const OurServices = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} onMouseEnter={handleMouseEnter}>
         <div className={styles.title}>OUR SERVICES</div>
         <div className={styles.box}>
           <div className={styles.leftBox}>
