@@ -5,6 +5,9 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
+import WorkCard from "../../../components/WorkCard/WorkCard";
+
+import WORKS_DATA from "../../../data/worksData";
 
 const Main = () => {
   return (
@@ -50,8 +53,8 @@ const Main = () => {
                 </FormControl>
             </div>
             <div className={styles.leftContainer}>
+                <div className={styles.categoryTitle}>Type of Works</div>
                 <div className={styles.workTypeContainer}>
-                    <div className={styles.categoryTitle}>Type of Works</div>
                     <CheckboxComponent title="See All Projects" />
                     <CheckboxComponent title="Videography" />
                     <CheckboxComponent title="Photography" />
@@ -62,8 +65,8 @@ const Main = () => {
                     <CheckboxComponent title="Website Development" />
                     <CheckboxComponent title="Game Development" />
                 </div>
+                <div className={styles.categoryTitle}>Production Period</div>
                 <div className={styles.productionPeriodContainer}>
-                    <div className={styles.categoryTitle}>Production Period</div>
                     <CheckboxComponent title="Less Than Month" />
                     <CheckboxComponent title="More Than 1 Month" />
                 </div>
@@ -71,11 +74,9 @@ const Main = () => {
             <div className={styles.rightContainer}>
                 <div className={styles.carousel}>
                     <div className={styles.group}>
-                        <div className={styles.card}>1</div>
-                        <div className={styles.card}>2</div>
-                        <div className={styles.card}>3</div>
-                        <div className={styles.card}>4</div>
-                        <div className={styles.card}>5</div>
+                        {WORKS_DATA.map((work) => (
+                            <WorkCard id={work.id} imageUrl={work.imageUrl} types={work.types} />
+                        ))}
                     </div>
                 </div>
             </div>

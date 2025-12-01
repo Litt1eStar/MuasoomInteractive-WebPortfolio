@@ -1,0 +1,36 @@
+.card{
+    flex: 0 0 60rem;
+    width: 45%;
+    height: 95%;
+    background-color: black;
+    color: white;
+    font-size: 10rem;
+
+    background: url("../../img/TopWork/secondPicture.JPG");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+
+    padding-top: 1rem;
+}
+
+.worktype_box{
+    width: auto;
+    height: 8%;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 2px solid white;
+    -webkit-box-shadow:0px 0px 25px 0px rgba(199,199,199,0.99);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(199,199,199,0.99);
+    box-shadow: 0px 0px 25px 0px rgba(199,199,199,0.99);
+}
