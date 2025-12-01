@@ -1,23 +1,20 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-// import WORKS_DATA from "../../data/worksData";
+import WORKS_DATA from "../../data/worksData";
 import styles from "./WorkDetail.module.css";
 
 import IMG_DOLOREM from "../../img/Project/Dolorem.jpg";
 import { WorkType } from "../../components/WorkCard/WorkCard";
 import CTA from "../../components/CTA/CTA";
 
-
-const WORKS_DATA = [
-    {id: 1, name: "Dolorem", types: ["Videography", "Editing", "Colour grading"], imageUrl: IMG_DOLOREM}
-]
-
 const WorkDetail = () => {
-  const { workId } = useParams();
-  const targetId = parseInt(workId, 10);
-//   const project = WORKS_DATA.find(p => p.id === targetId);
+  const pathName = window.location.pathname;
+  const pathSegments = pathName.split('/');
+  const workIdString = pathSegments[pathSegments.length - 1];
+
+  const targetId = parseInt(workIdString, 10);
+  const project = WORKS_DATA.find(p => p.id == targetId);
 
   const workImagePath = {backgroundImage: `url(${IMG_DOLOREM})`}
+  console.log(project)
 
   return (
     <>
@@ -29,8 +26,8 @@ const WorkDetail = () => {
                 <div className={styles.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit labore doloremque praesentium, ea nobis est, debitis sequi voluptatibus ratione eligendi quaerat dignissimos quibusdam optio adipisci! Enim blanditiis est quisquam libero culpa saepe, distinctio tempore aliquam accusantium quasi quod voluptatibus fuga id velit quaerat temporibus ipsa iusto dicta? Cumque, molestiae nam.</div>
                 <div className={styles.subHeader}>Duration : 1 week</div>
                 <div className={styles.typeContainer}>
-                    {WORKS_DATA[0].types.map((type) => (
-                        <WorkType type={type} />  
+                    {project.types.map((type) => (
+                        <WorkType key={type} type={type} />  
                     ))}
                 </div>
             </div>
