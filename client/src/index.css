@@ -30,6 +30,8 @@ button{
 
 a{
   text-decoration: solid;
+  margin: 0;
+  padding: 0;
 }
 
 input{
