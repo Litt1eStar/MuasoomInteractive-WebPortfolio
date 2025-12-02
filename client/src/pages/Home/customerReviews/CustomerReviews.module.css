@@ -33,9 +33,9 @@
     animation: scroll 40s linear infinite;
 }
 
-.scroller[data-animated="true"]:hover .scrollerInner {
+/* .scroller[data-animated="true"]:hover .scrollerInner {
     animation-play-state: paused;
-}
+} */
 
 .scrollerInner {
     display: flex;

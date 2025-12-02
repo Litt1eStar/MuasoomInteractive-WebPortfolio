@@ -10,7 +10,7 @@ const Hero = () => {
             <h1 className={styles.name}>Interactive</h1>
             <p className={styles.description}>Production House Based In Thailand</p>
             <div className={styles.btn_container}>
-              <ButtonType01 title={"Contact Us"} destination={"/aboutus"} />
+              <ButtonType01 title={"Contact Us"} destination={"/contact"} />
               <ButtonType01 title={"Projects"} destination={"/works"}/>
             </div>
         </div>
