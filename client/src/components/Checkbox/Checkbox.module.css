@@ -1,13 +1,42 @@
 .checkboxItem{
-    width: 90%;
-    height: 10%;
+    width: 100%; /* Use 100% of parent width */
+    /* height: 10%; REMOVE fixed height */
+    padding: 0.5rem 0; /* Use padding for spacing */
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Highlight row on hover */
+}
+
+.checkboxItem:hover {
+    background-color: rgba(78, 211, 0, 0.1); /* Subtle green background highlight */
 }
 
 .checkboxTitle{
     margin-left: 1rem;
     color: rgb(255, 255, 255);
     font-size: 2rem;
+}
+
+.checkboxTitle{
+    margin-left: 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.25rem; /* Reduced for better reading flow */
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+/* Adjusting the MUI Checkbox component appearance */
+.checkboxItem .MuiCheckbox-root {
+    color: #999 !important; /* Default color: Dark gray border */
+}
+
+.checkboxItem .Mui-checked {
+    color: var(--monster-green) !important; /* Checked color: Monster Green */
+}
+
+.checkboxItem .MuiCheckbox-root:hover {
+    /* Optional: Subtle box shadow on hover */
+    box-shadow: 0 0 5px rgba(78, 211, 0, 0.5); 
 }

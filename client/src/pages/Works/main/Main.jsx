@@ -17,7 +17,21 @@ const ALL_CATEGORIES = [
 
 const Main = () => {
     const [selectedCategories, setSelectedCategories] = useState([]);
+    const [selectedWorkType, setSelectedWorkType] = useState("None");
+    const [isHoveringGroup, setIsHoveringGroup] = useState(false)
 
+    const handleWorkTypeSelectChange = (event) => {
+        const newValue = event.target.value;
+        setSelectedWorkType(newValue);
+        
+        // Convert the single select action into the multi-select state format:
+        if (newValue === 'None') {
+            handleCategoryChange("See All Projects"); 
+        } else {
+            handleCategoryChange(newValue); // Add the newly selected category
+        }
+    };
+    
     const handleCategoryChange = (category) => {
         setSelectedCategories(prevSelected => {
             if(prevSelected.includes(category)){
@@ -42,17 +56,18 @@ const Main = () => {
     <>
         <div className={styles.container}>
             <div className={styles.topContainer}>
-                <Button color="primary" variant="contained" sx={{height: '5rem'}}>Show All Project</Button>
                 <FormControl sx={{ minWidth: 200 }}>
                     <InputLabel id="work-type-select-label"></InputLabel> 
                     <Select
                         labelId="work-type-select-label"
                         id="work-type-select"
                         label="Type of Works"
-                        sx={{ width: {sm: '30%', md: '100%', lg: '100%'} ,height: '5rem', border: '5px solid black', textAlign: 'center'}}
+                        value={selectedWorkType} 
+                        onChange={handleWorkTypeSelectChange}
+                        sx={{ backgroundColor: 'white', width: {sm: '30%', md: '100%', lg: '100%'} ,height: '5rem', border: '5px solid black', textAlign: 'center'}}
                         defaultValue={"None"}
+                        
                     >
-                        <MenuItem value={"None"} sx={{color: 'black'}}>None</MenuItem>
                         <MenuItem value={"Videography"} sx={{color: 'black'}}>Videography</MenuItem>
                         <MenuItem value={"Photography"} sx={{color: 'black'}}>Photography</MenuItem>
                         <MenuItem value={"2D Animation"} sx={{color: 'black'}}>2D Animation</MenuItem>
@@ -61,22 +76,6 @@ const Main = () => {
                         <MenuItem value={"Colour Grading"} sx={{color: 'black'}}>Colour Grading</MenuItem>
                         <MenuItem value={"Website Development"} sx={{color: 'black'}}>Website Development</MenuItem>
                         <MenuItem value={"Game Development"} sx={{color: 'black'}}>Game Development</MenuItem>
-                    </Select>
-                </FormControl>
-
-                <FormControl sx={{ minWidth: 200 }}>
-                    <InputLabel id="work-type-select-label"></InputLabel> 
-                    <Select
-                        labelId="work-type-select-label"
-                        id="work-type-select"
-                        label="Type of Works"
-                        sx={{ width: {sm: '30%', md: '100%', lg: '100%'} , height: '5rem', border: '5px solid black', textAlign: 'center'}}
-                        defaultValue={"None"}
-                    >
-                        <MenuItem value={"None"} sx={{color: 'black'}}>None</MenuItem>
-                        <MenuItem value={"Less Than 1 Month"} sx={{color: 'black'}}>Less Than 1 Month</MenuItem>
-                        <MenuItem value={"More Than 1 Month"} sx={{color: 'black'}}>More Than 1 Month</MenuItem>
-
                     </Select>
                 </FormControl>
             </div>
@@ -98,8 +97,21 @@ const Main = () => {
                     ))}
                 </div>
             </div>
+
+            {
+                isHoveringGroup && (
+                    <div className={styles.scrollHint}>
+                        SCROLL FOR MORE PROJECT
+                    </div>
+                )
+            }
+
             <div className={styles.rightContainer}>
-                <div className={styles.group}>
+                <div 
+                    className={styles.group}
+                    onMouseEnter={() => setIsHoveringGroup(true)}
+                    onMouseLeave={() => setIsHoveringGroup(false)}
+                >
                     {filteredWorks.map((work) => (
                         <WorkCard 
                             key={work.id} 
@@ -109,9 +121,7 @@ const Main = () => {
                         />
                     ))}
                 </div>
-                {filteredWorks.length === 0 && (
-                    <p style={{color: 'white', padding: '20px', fontSize: '1.2rem'}}>No projects match the selected criteria.</p>
-                )}
+
             </div>
         </div>
     </>

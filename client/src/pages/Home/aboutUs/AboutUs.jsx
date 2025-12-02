@@ -12,7 +12,7 @@ const AboutUs = () => {
                 <ButtonType01 title={"Learn More"} destination={'/aboutus'} />
             </div>
             <div className={styles.rightContainer}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente amet iure quasi, voluptas iste eaque repellat molestiae, ipsam soluta reprehenderit, aspernatur veritatis quis necessitatibus numquam. Nesciunt quam natus voluptas soluta voluptate, expedita at culpa sunt sint, in dolorum pariatur vero nihil nemo quasi, consequatur eaque eveniet quaerat. Sit, asperiores harum.
+                We are Muasoom, a dynamic production house specializing in immersive, high-contrast multimedia experiences. We blend videography, web development, and animation to turn your vision into a powerful, unforgettable digital reality.
             </div>
         </div>
     </>

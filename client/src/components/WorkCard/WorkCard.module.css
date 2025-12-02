@@ -16,8 +16,19 @@
     gap: 2rem;
 
     padding-top: 1rem;
+
+    transition: all 0.3s ease-in-out;
 }
 
+.card:hover{
+    transform: scale(1.1);
+
+    -webkit-box-shadow:0px 0px 47px 10px rgba(4,255,0,0.9);
+    -moz-box-shadow: 0px 0px 47px 10px rgba(4,255,0,0.9);
+    box-shadow: 0px 0px 47px 10px rgba(4,255,0,0.9);
+
+
+}
 .worktype_box{
     width: auto;
     height: 15%;
@@ -33,4 +44,22 @@
     -webkit-box-shadow:0px 0px 25px 0px rgba(199,199,199,0.99);
     -moz-box-shadow: 0px 0px 25px 0px rgba(199,199,199,0.99);
     box-shadow: 0px 0px 25px 0px rgba(199,199,199,0.99);
+}
+
+@media screen and (max-width: 1024px) {
+    .card{
+        height: 40%;
+    }
+
+
+    .worktype_box{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        width: 90%;
+        height: 50%;
+    }
 }

@@ -12,10 +12,10 @@ const Hero = () => {
             </div>
             <div className={styles.rightContainer}>
                 <div className={styles.description}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non facilisis quam, sit amet viverra elit. Pellentesque sed tempus turpis. Cras a ex sit amet odio sagittis sollicitudin. Sed non semper nunc, eu viverra massa. Donec ut interdum mi, id finibus massa. Maecenas vel metus sapien.
+                    We are Muasoom, a dynamic production house specializing in immersive, high-contrast multimedia experiences. We blend videography, web development, and animation to turn your vision into a powerful, unforgettable digital reality, prioritizing bold, high-performance execution.
                 </div>
                 <div className={styles.description}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non facilisis quam, sit amet viverra elit. Pellentesque sed tempus turpis. Cras a ex sit amet odio sagittis sollicitudin. Sed non semper nunc, eu viverra massa. Donec ut interdum mi, id finibus massa. Maecenas vel metus sapien.
+                    Muasoom is where imagination meets its instruction manual. We are architects of digital narratives, using cutting-edge technology to build solutions with maximum visual impact and zero technical static. Let's build your legacy in every dimension.
                 </div>
             </div>
         </div>

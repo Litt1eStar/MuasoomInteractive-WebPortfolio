@@ -24,13 +24,13 @@ const MemberCard = ({ name, role, imageUrl }) => {
 
             <div className={styles.socialOverlay}>
                 <div className={styles.socialLinks}>
-                    <a href="#" target="_blank" className={styles.socialIcon} aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/krittin-pragopdee-011114234/" target="_blank" className={styles.socialIcon} aria-label="LinkedIn">
                         <FaLinkedinIn size={50} color="#4ED300" />
                     </a>
-                    <a href="#" target="_blank" className={styles.socialIcon} aria-label="Instagram">
+                    <a href="https://www.linkedin.com/in/krittin-pragopdee-011114234/" target="_blank" className={styles.socialIcon} aria-label="Instagram">
                         <FaInstagram size={50} color="#4ED300" />
                     </a>
-                    <a href="#" target="_blank" className={styles.socialIcon} aria-label="X (Twitter)">
+                    <a href="https://www.linkedin.com/in/krittin-pragopdee-011114234/" target="_blank" className={styles.socialIcon} aria-label="X (Twitter)">
                         <FaXTwitter size={50} color="#4ED300" />
                     </a>
                 </div>
