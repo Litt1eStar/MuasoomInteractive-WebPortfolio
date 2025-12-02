@@ -16,7 +16,7 @@ const WorkDetail = () => {
   return (
     <>
         <div className={styles.container}>
-            <div className={styles.title}>Dolorem</div>
+            <div className={styles.title}>{project.name}</div>
             <div className={styles.workImg} style={workImagePath}></div>
             <div className={styles.detailContainer}>
                 <div className={styles.subHeader}>DETAIL</div>
