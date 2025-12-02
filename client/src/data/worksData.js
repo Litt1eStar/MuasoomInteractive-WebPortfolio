@@ -8,7 +8,7 @@ import IMG_FINALPHOTO_POTATO from "../img/Project/FinalPotato.jpg";
 import IMG_NUMBERCASTER from "../img/Project/NumberCaster.png";
 
 const WORKS_DATA = [
-    {id: 1, name: "Dolorem", types: ["Videography", "Editing", "Colour grading"], imageUrl: IMG_DOLOREM},
+    {id: 1, name: "Dolorem", types: ["Videography", "Editing"], imageUrl: IMG_DOLOREM},
     {id: 2, name: "PDPA", types: ["2D Animation", "Editing"], detail: "This project is a hand-drawn, frame-by-frame animation created for the Electronic Law class. The core purpose is to simplify and clearly explain the key principles of the Personal Data Protection Act (PDPA) through an accessible, highly engaging visual narrative.",imageUrl: IMG_PDPA},
     {id: 3, name: "Refiber", types: ["2D Animation", "Editing"], detail: "This project is a 2D motion graphic designed to provide a comprehensive, step-by-step visual tour of a PET plastic bottle recycling plant, illustrating the transformation process from discarded bottles into usable synthetic fibers.",imageUrl: IMG_FACTORY},
     {id: 4, name: "Vlog", types: ["Videography", "Editing"], detail: "This project is a high-energy, $\mathbf{1}$-minute video montage designed to capture the essence and key moments of a single day. The primary focus is on rhythmic and dynamic video editing to convey pace and atmosphere within a very short timeframe.",imageUrl: IMG_WORKSHOP2},

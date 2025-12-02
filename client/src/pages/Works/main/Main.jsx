@@ -8,8 +8,36 @@ import Button from '@mui/material/Button';
 import WorkCard from "../../../components/WorkCard/WorkCard";
 
 import WORKS_DATA from "../../../data/worksData";
+import { useMemo, useState } from "react";
+
+const ALL_CATEGORIES = [
+    "Videography", "Photography", "2D Animation", "3D Animation", 
+    "Editing", "Colour Grading", "Website Development", "Game Development"
+];
 
 const Main = () => {
+    const [selectedCategories, setSelectedCategories] = useState([]);
+
+    const handleCategoryChange = (category) => {
+        setSelectedCategories(prevSelected => {
+            if(prevSelected.includes(category)){
+                return prevSelected.filter(c => c != category);
+            }else{
+                return [...prevSelected, category];
+            }
+        })
+    }
+
+    const filteredWorks = useMemo(() => {
+        if(selectedCategories.length == 0 || selectedCategories.includes("See All Projects")){
+            return WORKS_DATA;
+        }
+
+        return WORKS_DATA.filter(work => {
+            return selectedCategories.some(selectedCat => work.types.includes(selectedCat));
+        });
+    }, [selectedCategories]);
+
   return (
     <>
         <div className={styles.container}>
@@ -55,30 +83,35 @@ const Main = () => {
             <div className={styles.leftContainer}>
                 <div className={styles.categoryTitle}>Type of Works</div>
                 <div className={styles.workTypeContainer}>
-                    <CheckboxComponent title="See All Projects" />
-                    <CheckboxComponent title="Videography" />
-                    <CheckboxComponent title="Photography" />
-                    <CheckboxComponent title="2D Animation" />
-                    <CheckboxComponent title="3D Animation" />
-                    <CheckboxComponent title="Editing" />
-                    <CheckboxComponent title="Colour Grading" />
-                    <CheckboxComponent title="Website Development" />
-                    <CheckboxComponent title="Game Development" />
-                </div>
-                <div className={styles.categoryTitle}>Production Period</div>
-                <div className={styles.productionPeriodContainer}>
-                    <CheckboxComponent title="Less Than Month" />
-                    <CheckboxComponent title="More Than 1 Month" />
+                    <CheckboxComponent 
+                        title="See All Projects" 
+                        checked={selectedCategories.includes("See All Projects")}
+                        onChange={() => handleCategoryChange("See All Projects")}
+                    />
+                    {ALL_CATEGORIES.map(category => (
+                        <CheckboxComponent 
+                            key={category}
+                            title={category}
+                            checked={selectedCategories.includes(category)}
+                            onChange={() => handleCategoryChange(category)}
+                        />
+                    ))}
                 </div>
             </div>
             <div className={styles.rightContainer}>
-                <div className={styles.carousel}>
-                    <div className={styles.group}>
-                        {WORKS_DATA.map((work) => (
-                            <WorkCard id={work.id} imageUrl={work.imageUrl} types={work.types} />
-                        ))}
-                    </div>
+                <div className={styles.group}>
+                    {filteredWorks.map((work) => (
+                        <WorkCard 
+                            key={work.id} 
+                            id={work.id} 
+                            imageUrl={work.imageUrl} 
+                            types={work.types} 
+                        />
+                    ))}
                 </div>
+                {filteredWorks.length === 0 && (
+                    <p style={{color: 'white', padding: '20px', fontSize: '1.2rem'}}>No projects match the selected criteria.</p>
+                )}
             </div>
         </div>
     </>
