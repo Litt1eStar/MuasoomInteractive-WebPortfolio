@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import styles from "./OurServices.module.css"
 
 import DoloremImage from '../../../img/Project/Dolorem.jpg'
-import PhotoImage from '../../../img/Project/FinalPhotography.jpg'
+import PhotoImage from '../../../img/Project/FinalPhotography.JPG'
 import GameDevImage from '../../../img/Project/NumberCaster.png'
 import AnimationImage from '../../../img/Project/PDPA.png'
 import AlphaImage from '../../../img/Project/AlphaLumaMatte.png'
