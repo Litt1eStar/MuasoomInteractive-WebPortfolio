@@ -3,7 +3,7 @@ import IMG_PDPA from "../img/Project/PDPA.png";
 import IMG_FACTORY from "../img/Project/Factory.png";
 import IMG_WORKSHOP2 from "../img/Project/Workshop2.png";
 import IMG_ALPHALUMA from "../img/Project/AlphaLumaMatte.png";
-import IMG_FINALPHOTO_WOODY from "../img/Project/FinalPhotography.jpg";
+import IMG_FINALPHOTO_WOODY from "../img/Project/FinalPhotography.JPG";
 import IMG_FINALPHOTO_POTATO from "../img/Project/FinalPotato.jpg";
 import IMG_NUMBERCASTER from "../img/Project/NumberCaster.png";
 
